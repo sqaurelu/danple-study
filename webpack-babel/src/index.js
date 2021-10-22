@@ -1,11 +1,7 @@
-import './style.css';
+import renderRootContainer from './js/renderRootContainer';
+import submitForm from './js/submitForm';
 
-function component() {
-    const element = document.createElement('div');
+document.body.appendChild(renderRootContainer());
 
-    element.innerHTML = 'Hello Worlddsfdsfs';
-
-    return element;
-}
-
-document.body.appendChild(component());
+const form = document.getElementById('form');
+form.addEventListener('submit', submitForm);
